@@ -2,11 +2,11 @@
 
 A single static page at [thatsa.bingo](https://thatsa.bingo), hosted on GitHub Pages.
 
-The page displays a looping GIF from *Inglourious Basterds* (2009). The GIF is stored in this repository, so visitors don't depend on a third-party embed. [GIF source on Tenor](https://tenor.com/view/inglourious-basterds-christoph-waltz-hans-landa-thats-a-bingo-bingo-gif-5389920).
+The page displays a looping GIF from *Inglourious Basterds* (2009). The GIF is stored in this repository, so visitors don't depend on a third-party embed. [GIF source on GIPHY](https://giphy.com/gifs/stephen-django-djangostephen-DFu7j1d1AQbaE).
 
 ## Editing
 
-Edit `index.html` or replace `assets/thats-a-bingo.gif`, then push to `main`. GitHub Pages publishes the repository root. No build step or dependencies are needed.
+Edit `index.html` or replace `assets/thats-a-bingo-giphy.gif`, then push to `main`. GitHub Pages publishes the repository root. No build step or dependencies are needed.
 
 To preview locally, run `python3 -m http.server 8000`, then open <http://localhost:8000>.
 
