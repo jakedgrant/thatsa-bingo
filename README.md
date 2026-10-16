@@ -22,6 +22,10 @@ In Porkbun DNS, replace the default parking records with:
 | A | Leave blank | 185.199.109.153 |
 | A | Leave blank | 185.199.110.153 |
 | A | Leave blank | 185.199.111.153 |
+| AAAA | Leave blank | 2606:50c0:8000::153 |
+| AAAA | Leave blank | 2606:50c0:8001::153 |
+| AAAA | Leave blank | 2606:50c0:8002::153 |
+| AAAA | Leave blank | 2606:50c0:8003::153 |
 | CNAME | www | jakedgrant.github.io |
 
 Enable **Enforce HTTPS** in the repository's Pages settings once GitHub issues the certificate. GitHub manages certificate renewal.
