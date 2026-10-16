@@ -12,26 +12,70 @@
         margin: 0;
         min-height: 100vh;
         min-height: 100svh;
-        display: grid;
-        place-items: center;
-        padding: 1rem;
-        background: #111;
+        background: #111 url("assets/thats-a-bingo-giphy.gif") repeat;
+        background-size: 272px 272px;
         color: #fff;
       }
-      main { display: contents; }
-      img {
-        display: block;
-        width: min(100%, 48rem);
-        height: auto;
-        max-height: calc(100svh - 2rem);
-        object-fit: contain;
+      .sr-only {
+        position: absolute;
+        width: 1px;
+        height: 1px;
+        padding: 0;
+        margin: -1px;
+        overflow: hidden;
+        clip-path: inset(50%);
+        white-space: nowrap;
+        border: 0;
+      }
+      .badge {
+        position: fixed;
+        top: 1rem;
+        left: 1rem;
+        display: grid;
+        place-content: center;
+        width: 4.5rem;
+        height: 4.5rem;
+        border: 8px solid #f9d54a;
+        border-radius: 50%;
+        background: radial-gradient(circle at 35% 25%, #fff, #fff5d6 70%, #ddcba1);
+        color: #b5161d;
+        font-family: Georgia, serif;
+        font-weight: 900;
+        text-align: center;
+        line-height: 1;
+        box-shadow: inset 0 0 0 2px #b5161d, 2px 4px 0 #9b651b, 0 6px 12px #000a;
+        transform: rotate(-12deg);
+      }
+      .badge span { font-size: 1rem; }
+      .badge strong { font-size: 1.75rem; }
+      .credit {
+        position: fixed;
+        right: 1rem;
+        bottom: max(1rem, env(safe-area-inset-bottom));
+        max-width: calc(100% - 2rem);
+        color: #fff;
+        font-family: "Comic Sans MS", "Comic Sans", "Chalkboard SE", cursive;
+        font-size: clamp(1rem, 2vw, 1.25rem);
+        font-weight: 700;
+        text-align: right;
+        text-decoration: none;
+        text-shadow: 1px 1px 2px #000, 2px 3px 4px #000, 0 0 8px #000;
+      }
+      .credit:hover { text-decoration: underline; }
+      .credit:focus-visible {
+        outline: 2px solid #fff;
+        outline-offset: 5px;
       }
     </style>
   </head>
   <body>
     <main>
-      <img src="assets/thats-a-bingo-giphy.gif" width="272" height="272"
-        alt="Christoph Waltz as Hans Landa in Inglourious Basterds, saying 'That's a bingo!'">
+      <h1 class="sr-only">That's a bingo!</h1>
+      <p class="sr-only">A tiled GIF of Christoph Waltz as Hans Landa in Inglourious Basterds, saying 'That's a bingo!'</p>
+      <div class="badge" aria-hidden="true"><span>B</span><strong>1</strong></div>
     </main>
+    <footer>
+      <a class="credit" href="https://jakegrant.dev">Made with ☕️ by Jake</a>
+    </footer>
   </body>
 </html>
